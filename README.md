@@ -5,8 +5,9 @@ EKK
 - node 8.8.1
 - npm 5.4.2
 - yarn 1.2.1
-- python 3.6
+- python 3.6.2
 - pip 9.0.1
+- pipenv 9.0.0
 
 
 ## First
@@ -24,13 +25,13 @@ pip install pipenv
 
 
 ## Setup
-- nodejsのパッケージのインストール
+- `node`のパッケージのインストール
 
 ```
 yarn
 ```
 
-- pythonのパッケージのインストール
+- `python`のパッケージのインストール
 
 ```
 pipenv install
@@ -52,13 +53,13 @@ yarn build
 
 
 ## Usage(backend)
-- AWSのLambdaにアップロードするためのライブラリのインストール
+- AWSの`Lambda`にアップロードするためのライブラリのインストール
 
 ```
 pip install -r ./requirements.txt -t .
 ```
 
-- python関数の実行
+- `python`関数の実行
 
 ```
 pipenv run python (target).py
