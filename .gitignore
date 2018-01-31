@@ -1,0 +1,6 @@
+node_modules
+
+# lambdaのアップロードのためのライブラリ
+lambda/send_form/*
+!lambda_function.py
+!requirements.txt
