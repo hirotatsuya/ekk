@@ -104,7 +104,10 @@
           <div class="uk-text-center">
             <h1>入会フォーム</h1>
             <div v-show="messageFlag">
-              <span v-if="errorFlag" style="color: red;">{{ message }}</span>
+              <span
+                v-if="errorFlag"
+                style="color: red;"
+              >{{ message }}</span>
               <span v-else>{{ message }}</span>
             </div>
             <div>
@@ -133,7 +136,8 @@
                 </div>
                 <div class="uk-margin">
                   <button
-                    class="uk-button uk-width-large uk-button-default" @click="enter"
+                    class="uk-button uk-width-large uk-button-default"
+                    @click="enter"
                   >ENTER</button>
                 </div>
               </div>
@@ -181,7 +185,7 @@ export default {
       email: '',
       message: '',
       messageFlag: false,
-      errorFlag: false,
+      errorFlag: false
     }
   },
   created () {
@@ -224,7 +228,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>
