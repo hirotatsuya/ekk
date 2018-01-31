@@ -2,7 +2,7 @@
   "name": "ekk",
   "version": "1.0.0",
   "description": "ekk site",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "https://github.com/hirotatsuya/ekk.git",
   "author": "hirotatsu",
   "license": "MIT",
