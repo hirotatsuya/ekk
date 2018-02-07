@@ -3,7 +3,7 @@
     id="send-success-modal"
     class="uk-flex-top"
   >
-    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-2-3">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-1-1">
       <h2 class="uk-modal-title">EKKに入会ありがとうございます！</h2>
       <div>
         Welcom to EKK !!!!<br>
@@ -23,7 +23,7 @@
 import UIkit from 'uikit'
 
 export default {
-  name: 'SendSuccess',
+  name: 'SendSuccessModal',
   mounted () {
     UIkit.modal('#send-success-modal').hide()
   }

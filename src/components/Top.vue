@@ -44,7 +44,10 @@
       </div>
       <div class="uk-section uk-section-light">
         <div class="uk-container">
-          <div class="uk-position-relative uk-light" uk-slideshow="animation: fade">
+          <div
+            class="uk-position-relative uk-light"
+            uk-slideshow="animation: fade"
+          >
             <ul class="uk-slideshow-items">
               <li><img src="../images/photo1.jpg" alt="" uk-cover></li>
               <li><img src="../images/photo2.jpg" alt="" uk-cover></li>
@@ -115,7 +118,7 @@
                 <div class="uk-margin">
                   <div class="uk-form-controls">
                     <input
-                      class="uk-input uk-form-width-large"
+                      class="uk-input uk-width-1-1@s uk-width-1-2@m"
                       type="text"
                       placeholder="name"
                       v-model="name"
@@ -126,7 +129,7 @@
                 <div class="uk-margin">
                   <div class="uk-form-controls">
                     <input
-                      class="uk-input uk-form-width-large"
+                      class="uk-input uk-width-1-1@s uk-width-1-2@m"
                       type="email"
                       placeholder="email"
                       v-model="email"
@@ -136,7 +139,7 @@
                 </div>
                 <div class="uk-margin">
                   <button
-                    class="uk-button uk-width-large uk-button-default"
+                    class="uk-button uk-button-default uk-width-1-1@s uk-width-1-2@m"
                     @click="enter"
                   >ENTER</button>
                 </div>
@@ -150,6 +153,14 @@
           <div class="uk-text-center">
             <h1>今後ともEKKを、よろしくはん</h1>
           </div>
+          <div class="uk-text-bottom">
+            <a
+              id="totop"
+              href="#"
+              uk-totop
+              uk-scroll
+            ></a>
+          </div>
         </div>
       </div>
       <div class="uk-position-relative">
@@ -158,6 +169,7 @@
         </div>
       </div>
     </div>
+    <welcome-to-ekk-modal />
     <send-success-modal />
   </div>
 </template>
@@ -165,7 +177,8 @@
 <script>
 import UIkit from 'uikit'
 import axios from 'axios'
-import SendSuccess from './SendSuccess.vue'
+import SendSuccessModal from './SendSuccessModal.vue'
+import WelcomeToEkkModal from './WelcomeToEkkModal.vue'
 import {
   validateName,
   validateEmail
@@ -177,7 +190,8 @@ import {
 export default {
   name: 'Top',
   components: {
-    'send-success-modal': SendSuccess
+    'send-success-modal': SendSuccessModal,
+    'welcome-to-ekk-modal': WelcomeToEkkModal
   },
   data () {
     return {
@@ -187,6 +201,9 @@ export default {
       messageFlag: false,
       errorFlag: false
     }
+  },
+  mounted () {
+    UIkit.modal('#welcome-to-ekk-modal').show()
   },
   created () {
     this.name = localStorage.getItem('name')
@@ -228,3 +245,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+#totop {
+  float: right;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 10vw;
+  bottom: 10vh;
+  color: yellow;
+}
+</style>
